@@ -1,8 +1,8 @@
 {
   "name": "batamliving",
   "version": "0.0.1",
-  "description": "A starter for Medusa projects.",
-  "author": "Medusa (https://medusajs.com)",
+  "description": "Batam Living Furniture Store",
+  "author": "Ahmad Miftahul Zaki",
   "license": "MIT",
   "keywords": [
     "sqlite",
@@ -13,9 +13,11 @@
     "medusa"
   ],
   "scripts": {
-    "build": "medusa build",
+    "build": "medusa build --skip-admin",
+    "build:no-admin": "NODE_ENV=production MEDUSA_ADMIN_DISABLE=true medusa build --skip-admin",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
+    "start:no-admin": "NODE_ENV=production MEDUSA_ADMIN_DISABLE=true medusa start",
     "dev": "medusa develop",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
