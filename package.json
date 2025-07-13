@@ -1,7 +1,7 @@
 {
   "name": "batamliving",
   "version": "0.0.1",
-  "description": "Batam Living Furniture Store",
+  "description": "Furniture Store",
   "author": "Ahmad Miftahul Zaki",
   "license": "MIT",
   "keywords": [
@@ -13,11 +13,9 @@
     "medusa"
   ],
   "scripts": {
-    "build": "medusa build --skip-admin",
-    "build:no-admin": "NODE_ENV=production MEDUSA_ADMIN_DISABLE=true npx medusa build --skip-admin",
+    "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
-    "start:no-admin": "NODE_ENV=production MEDUSA_ADMIN_DISABLE=true npx medusa start",
     "dev": "medusa develop",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
